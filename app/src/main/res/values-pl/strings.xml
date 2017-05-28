@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">egzamineł</string>
+    <string name="exam_date">Data</string>
+    <string name="exam_reminder">Przypomnij</string>
+    <string name="exam_teacher">Prowadzący</string>
+    <string name="exam_type">Typ</string>
+    <string name="exams_select">Wybierz egzamin</string>
+    <string name="groups_select">Wybierz grupę</string>
+    <string name="main_login">Zaloguj się</string>
+    <string name="main_login_button">Zaloguj!</string>
+    <string name="main_login_password">admin</string>
+    <string name="main_login_username">admin</string>
+    <string name="main_menu_calendar">Kalendarz</string>
+    <string name="main_menu_list">Lista</string>
+    <string name="main_menu_data_res">Źródła danych</string>
+    <string name="main_menu_settigins">Ustawienia</string>
+</resources>
