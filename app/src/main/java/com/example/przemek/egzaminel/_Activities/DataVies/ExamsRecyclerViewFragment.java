@@ -16,6 +16,8 @@ import com.example.przemek.egzaminel.Database.Exam;
 import com.example.przemek.egzaminel.Interfaces.OnRWItemClickListener;
 import com.example.przemek.egzaminel.R;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import butterknife.BindView;
@@ -31,10 +33,13 @@ public class ExamsRecyclerViewFragment extends Fragment {
     private List<Exam> exams;
     private ExamsRecyclerViewAdapter mAdapter;
 
-    public static ExamsRecyclerViewFragment getInstance(List<Exam> exams) {
+    public static ExamsRecyclerViewFragment getInstance(List<Exam> exams, Comparator<Exam> comparator) {
 
         ExamsRecyclerViewFragment fragment = new ExamsRecyclerViewFragment();
         fragment.exams = exams;
+        if (comparator != null) {
+            Collections.sort(exams, comparator);
+        }
         return fragment;
     }
 

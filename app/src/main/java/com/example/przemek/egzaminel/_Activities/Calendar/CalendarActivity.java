@@ -105,7 +105,7 @@ public class CalendarActivity extends AppCompatActivity {
             }
 
             //load fragment
-            ExamsRecyclerViewFragment fragment = ExamsRecyclerViewFragment.getInstance(new ArrayList<>(selectedDayExams));
+            ExamsRecyclerViewFragment fragment = ExamsRecyclerViewFragment.getInstance(new ArrayList<>(selectedDayExams), null);
             Tools.reloadFragment(fragmentManager, fragment, null, R.id.calendar_details_container, TAG);
 
         }

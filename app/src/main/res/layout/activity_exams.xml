@@ -13,6 +13,13 @@
         android:textSize="24sp" />
 
     <FrameLayout
+        android:id="@+id/exams_groups_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+
+    <FrameLayout
         android:id="@+id/exams_main_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

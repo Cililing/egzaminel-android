@@ -11,6 +11,7 @@ import com.example.przemek.egzaminel.R;
 import com.example.przemek.egzaminel.Tools.Tools;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
@@ -57,7 +58,14 @@ public class ExamsActivity extends AppCompatActivity {
         if (exams.size() > 0) {
             List<Exam> list = new ArrayList<>();
             list.addAll(exams.values());
-            ExamsRecyclerViewFragment fragment = ExamsRecyclerViewFragment.getInstance(list);
+            ExamsRecyclerViewFragment fragment = ExamsRecyclerViewFragment.getInstance(list, new Comparator<Exam>() {
+                @Override
+                public int compare(Exam o1, Exam o2) {
+                    return (int)
+                            (o1.getUserTermOrDefault(getApplicationContext()).getDate()
+                            - o2.getUserTermOrDefault(getApplicationContext()).getDate());
+                }
+            });
             Tools.reloadFragment(fragmentManager, fragment, null, R.id.exams_main_container, TAG);
         }
     }
