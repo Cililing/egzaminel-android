@@ -13,6 +13,8 @@ public class AppConfig {
     public static final String TERMS_BY_EXAM_ID = "http://192.168.0.103/examapp/terms_by_exam_id.php";
     public static final String EXAMS_BY_USER_ID = "http://192.168.0.103/examapp/exams_by_user_id.php";
     public static final String TERMS_BY_USER_ID = "http://192.168.0.103/examapp/terms_by_user_id.php";
+    public static final String GROUP_BY_GROUP_ID_AND_PASSWORD = "http://192.168.0.103/examapp/group_by_group_id_and_password.php";
+    public static final String EXAMS_AND_TERMS_BY_GROUPS_IDS = "http://192.168.0.103/examapp/exams_and_terms_by_groups_ids.php";
 
     //log in
     public static final String LOG_IN_BY_USERNAME_AND_PASSWORD = "http://192.168.0.103/examapp/simple_login.php";
@@ -27,10 +29,14 @@ public class AppConfig {
 
     public static final String USER_ID = "user_id";
     public static final String GROUP_ID = "group_id";
+    public static final String GROUPS_IDS = "groups_ids";
+    public static final String GROUP_PASSWORD = "password";
     public static final String EXAM_ID = "exam_id";
 
     public static final String ERROR_CODE = "error";
     public static final String RESULT_CODE = "result";
+    public static final String RESULT_CODE_MUL_EXAMS = "result_exams";
+    public static final String RESULT_CODE_MUL_TERMS = "result_terms";
 
     //ID
     public static final String ID = "id";

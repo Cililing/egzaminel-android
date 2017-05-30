@@ -17,6 +17,13 @@
     <string name="main_menu_list">Lista</string>
     <string name="main_menu_data_res">Źródła danych</string>
     <string name="main_menu_settigins">Ustawienia</string>
+    <string name="groups_input_def_text"></string>
 
+
+    <string name="database_error">Błąd bazy danych</string>
+    <string name="network_error">Błąd sieci</string>
+    <string name="synchronization_finished">Synchronizacja zakończona.</string>
+    <string name="wrong_data_input">Nieprawidłowe dane.</string>
+    <string name="groups_input_label">Podaj dane grupy</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.przemek.egzaminel._Activities.Exam;
+package com.example.przemek.egzaminel.Activities.Exam;
 
 import android.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.przemek.egzaminel._Activities.BundleTags;
+import com.example.przemek.egzaminel.Activities.Static.BundleTags;
 import com.example.przemek.egzaminel.R;
 import com.example.przemek.egzaminel.Database.Exam;
 
@@ -23,8 +23,6 @@ public class ExamActivity extends AppCompatActivity {
     TextView examTecher;
     @BindView(R.id.exam_topic)
     TextView examTopic;
-    @BindView(R.id.exam_date_spinner)
-    Spinner dateSpinner;
     @BindView(R.id.exam_description)
     TextView examDescription;
 

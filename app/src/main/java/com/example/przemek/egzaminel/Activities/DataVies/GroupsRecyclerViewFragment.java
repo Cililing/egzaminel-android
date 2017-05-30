@@ -1,4 +1,4 @@
-package com.example.przemek.egzaminel._Activities.DataVies;
+package com.example.przemek.egzaminel.Activities.DataVies;
 
 
 import android.app.Fragment;
@@ -11,8 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.przemek.egzaminel._Activities.BundleTags;
+import com.example.przemek.egzaminel.Activities.Static.BundleTags;
 import com.example.przemek.egzaminel.Database.Group;
+import com.example.przemek.egzaminel.Interfaces.OnGroupItemClickListener;
 import com.example.przemek.egzaminel.Interfaces.OnRWItemClickListener;
 import com.example.przemek.egzaminel.R;
 
@@ -29,17 +30,21 @@ public class GroupsRecyclerViewFragment extends Fragment{
 
     private ArrayList<Group> groups;
     private GroupsRecyclerViewAdapter mAdapter;
+    OnRWItemClickListener<Group> rwItemClickListener;
+    OnGroupItemClickListener groupItemClickListener;
 
-    public static GroupsRecyclerViewFragment getInstance(ArrayList<Group> groups) {
+    public static GroupsRecyclerViewFragment getInstance(ArrayList<Group> groups, OnRWItemClickListener<Group> rwItemClickListener, OnGroupItemClickListener groupItemClickListener) {
 
         GroupsRecyclerViewFragment fragment = new GroupsRecyclerViewFragment();
         fragment.groups = groups;
+        fragment.rwItemClickListener = rwItemClickListener;
+        fragment.groupItemClickListener = groupItemClickListener;
         return fragment;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_groups_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_groups, container, false);
         ButterKnife.bind(this, view);
 
         initializeRecyclerView();
@@ -49,7 +54,7 @@ public class GroupsRecyclerViewFragment extends Fragment{
     }
 
     private void initializeRecyclerView() {
-        mAdapter = new GroupsRecyclerViewAdapter(groups, getActivity().getApplicationContext(), rwItemClickListener);
+        mAdapter = new GroupsRecyclerViewAdapter(groups, getActivity().getApplicationContext(), rwItemClickListener, groupItemClickListener);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -57,18 +62,12 @@ public class GroupsRecyclerViewFragment extends Fragment{
 
     }
 
-    private OnRWItemClickListener rwItemClickListener = new OnRWItemClickListener() {
-        @Override
-        public void onClick(int pos) {
-            Intent i = new Intent(getActivity().getApplicationContext(), ExamsActivity.class);
-            int id = groups.get(pos).getId();
-            i.putExtra(BundleTags.GROUPS_ID_TAG, id);
-            startActivity(i);
+    void updateDataSet(ArrayList<Group> newDataSet) {
+        groups.clear();
+        groups.addAll(newDataSet);
+        if (mAdapter != null) {
+            mAdapter.notifyDataSetChanged();
         }
+    }
 
-        @Override
-        public boolean onLongClick(int pos) {
-            return false;
-        }
-    };
 }

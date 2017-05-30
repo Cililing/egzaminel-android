@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.przemek.egzaminel._Activities.Calendar.CalendarActivity"
+    tools:context=".Activities.Calendar.CalendarActivity"
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
@@ -62,7 +62,7 @@
         <!--android:name="com.example.przemek.temporaryappname.Activities.Calendar.CalendarFragment"-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
-        <!--tools:layout="@layout/activity_calendar_fragment_calendar" />-->
+        <!--tools:layout="@layout/fragment_calendar" />-->
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.przemek.egzaminel._Activities.DataVies;
+package com.example.przemek.egzaminel.Activities.DataVies;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -22,10 +22,10 @@ class ExamsRecyclerViewAdapter extends RecyclerView.Adapter<ExamsRecyclerViewAda
 
     private List<Exam> examsList;
     private Context context;
-    OnRWItemClickListener listener;
+    OnRWItemClickListener<Exam> listener;
     SimpleDateFormat dateFormat;
 
-    public ExamsRecyclerViewAdapter(List<Exam> examsList, Context context, OnRWItemClickListener listener) {
+    public ExamsRecyclerViewAdapter(List<Exam> examsList, Context context, OnRWItemClickListener<Exam> listener) {
         this.context = context;
         this.examsList = examsList;
         this.listener = listener;
@@ -34,7 +34,7 @@ class ExamsRecyclerViewAdapter extends RecyclerView.Adapter<ExamsRecyclerViewAda
     @Override
     public ExamHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_exams_fragment_row, parent, false);
+                .inflate(R.layout.fragment_exam_row, parent, false);
 
         return new ExamHolder(itemView);
     }
@@ -42,12 +42,12 @@ class ExamsRecyclerViewAdapter extends RecyclerView.Adapter<ExamsRecyclerViewAda
     @Override
     public void onBindViewHolder(final ExamHolder holder, final int position) {
 
-        Exam exam = examsList.get(position);
+        final Exam exam = examsList.get(position);
         holder.subject.setText(exam.getSubject());
         holder.type.setText(exam.getType());
 
         //get term
-        Term term = exam.getUserTermOrDefault(context);
+        Term term = exam.getUserTermOrDefault();
         long time = term == null ? System.currentTimeMillis() : term.getDate();
 
         DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(context);
@@ -62,13 +62,13 @@ class ExamsRecyclerViewAdapter extends RecyclerView.Adapter<ExamsRecyclerViewAda
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.onClick(holder.getAdapterPosition());
+                listener.onClick(exam, holder.getAdapterPosition());
             }
         });
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                return listener.onLongClick(holder.getAdapterPosition());
+                return listener.onLongClick(exam, holder.getAdapterPosition());
             }
         });
     }

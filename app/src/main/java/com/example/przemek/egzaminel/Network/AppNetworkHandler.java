@@ -27,7 +27,7 @@ public class AppNetworkHandler {
 
     private static String TAG = AppNetworkHandler.class.getName();
 
-    public static void getStringAnswer(final String tag, String url,  final HashMap<String, String> params, final OnResponseListener listener) {
+    public static StringRequest getStringAnswer(final String tag, String url,  final HashMap<String, String> params, final OnResponseListener listener) {
 
         StringRequest request = new StringRequest(
                 Request.Method.POST,
@@ -55,6 +55,7 @@ public class AppNetworkHandler {
         };
 
         AppNetworkController.getInstance().addToRequestQueue(request, tag);
+        return request;
     }
 
 }

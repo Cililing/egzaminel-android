@@ -1,4 +1,4 @@
-package com.example.przemek.egzaminel._Activities.DataVies;
+package com.example.przemek.egzaminel.Activities.DataVies;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.przemek.egzaminel._Activities.BundleTags;
-import com.example.przemek.egzaminel._Activities.Exam.ExamActivity;
+import com.example.przemek.egzaminel.Activities.Static.BundleTags;
+import com.example.przemek.egzaminel.Activities.Exam.ExamActivity;
 import com.example.przemek.egzaminel.Database.Exam;
 import com.example.przemek.egzaminel.Interfaces.OnRWItemClickListener;
 import com.example.przemek.egzaminel.R;
@@ -43,9 +43,15 @@ public class ExamsRecyclerViewFragment extends Fragment {
         return fragment;
     }
 
+    public void updateExamList(List<Exam> examsList) {
+        exams.clear();
+        exams.addAll(examsList);
+        mAdapter.notifyDataSetChanged();
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_exams_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_exams, container, false);
         ButterKnife.bind(this, view);
 
         initializeRecyclerView();
@@ -62,17 +68,16 @@ public class ExamsRecyclerViewFragment extends Fragment {
         recyclerView.setAdapter(mAdapter);
     }
 
-    OnRWItemClickListener itemListener = new OnRWItemClickListener() {
+    OnRWItemClickListener<Exam> itemListener = new OnRWItemClickListener<Exam>() {
         @Override
-        public void onClick(int pos) {
-            Exam exam = exams.get(pos);
+        public void onClick(Exam item, int pos) {
             Intent i = new Intent(getActivity().getApplicationContext(), ExamActivity.class);
-            i.putExtra(BundleTags.EXAM_TAG, exam);
+            i.putExtra(BundleTags.EXAM_TAG, item);
             startActivity(i);
         }
 
         @Override
-        public boolean onLongClick(int pos) {
+        public boolean onLongClick(Exam item, int pos) {
             return false;
         }
     };

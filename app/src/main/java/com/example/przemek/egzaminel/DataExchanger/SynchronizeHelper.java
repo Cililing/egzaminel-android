@@ -1,4 +1,9 @@
-package com.example.przemek.egzaminel.Database;
+package com.example.przemek.egzaminel.DataExchanger;
+
+import com.example.przemek.egzaminel.Database.DatabaseHelper;
+import com.example.przemek.egzaminel.Database.Exam;
+import com.example.przemek.egzaminel.Database.Group;
+import com.example.przemek.egzaminel.Database.Term;
 
 import java.util.HashMap;
 import java.util.HashSet;

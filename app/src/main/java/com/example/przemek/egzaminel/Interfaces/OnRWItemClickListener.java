@@ -1,7 +1,9 @@
 package com.example.przemek.egzaminel.Interfaces;
 
-public interface OnRWItemClickListener {
+import java.util.Objects;
 
-    void onClick(int pos);
-    boolean onLongClick(int pos);
+public interface OnRWItemClickListener<T> {
+
+    void onClick(T item, int pos);
+    boolean onLongClick(T item, int pos);
 }

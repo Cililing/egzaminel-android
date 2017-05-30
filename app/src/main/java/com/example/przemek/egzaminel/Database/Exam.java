@@ -1,6 +1,6 @@
 package com.example.przemek.egzaminel.Database;
 
-import android.content.Context;
+import com.example.przemek.egzaminel.DataExchanger.SessionManager;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -9,6 +9,7 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class Exam implements Serializable, Cloneable {
@@ -163,10 +164,10 @@ public class Exam implements Serializable, Cloneable {
         this.userTermId = userTermId;
     }
 
-    public Term getUserTermOrDefault(final Context context) {
+    public Term getUserTermOrDefault() {
 
-        DatabaseHelper dbHelper = new DatabaseHelper(context);
-        HashMap<Integer, Term> termsMap = dbHelper.getTermsByExamID(examID);
+
+        HashMap<Integer, Term> termsMap = getTerms();
 
         if (termsMap.containsKey(userTermId)) {
             return termsMap.get(userTermId);
@@ -185,10 +186,17 @@ public class Exam implements Serializable, Cloneable {
         return terms.size() == 0 ? null : terms.get(0);
     }
 
-    public HashMap<Integer, Term> getTerms(Context context) {
+    public HashMap<Integer, Term> getTerms() {
 
-        DatabaseHelper dbHelper = new DatabaseHelper(context);
-        return dbHelper.getTermsByExamID(examID);
+        HashMap<Integer, Term> savedTerms = SessionManager.getTerms();
+        HashMap<Integer, Term> terms = new HashMap<>();
+        for (Map.Entry<Integer, Term> entry : savedTerms.entrySet()) {
+            if (entry.getValue().getExam_id() == examID) {
+                terms.put(entry.getValue().getId(), entry.getValue());
+            }
+        }
+
+        return terms;
 
     }
 }

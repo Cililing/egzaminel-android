@@ -1,5 +1,7 @@
 package com.example.przemek.egzaminel.Network;
 
+import android.widget.TextView;
+
 import com.example.przemek.egzaminel.Database.Exam;
 import com.example.przemek.egzaminel.Database.Group;
 import com.example.przemek.egzaminel.Database.Term;
@@ -30,6 +32,7 @@ public class AnswerParser {
         } catch (JSONException e) {
             //ignored
         }
+
         return -1;
     }
 
@@ -133,6 +136,55 @@ public class AnswerParser {
             terms.put(id, term);
         }
         return terms;
+    }
+
+    public static void parseExamsAndTerms(String rawText, HashMap<Integer, Exam> outExams, HashMap<Integer, Term> outTerms) throws JSONException {
+        if (rawText.equals(AppConfig.EMPTY_ANSWER)) return;
+        JSONObject reader = new JSONObject(rawText);
+        if (reader.optBoolean(AppConfig.ERROR_CODE, true)) return;
+
+
+        JSONArray examsArray = reader.getJSONArray(AppConfig.RESULT_CODE_MUL_EXAMS);
+        JSONArray termsArray = reader.getJSONArray(AppConfig.RESULT_CODE_MUL_TERMS);
+
+        JSONObject exams = new JSONObject();
+        JSONObject terms = new JSONObject();
+
+        //add "error -> false" to jsonobject
+        exams.put(AppConfig.ERROR_CODE, false);
+        terms.put(AppConfig.ERROR_CODE, false);
+
+        //and now add an array...
+        exams.put(AppConfig.RESULT_CODE, examsArray);
+        terms.put(AppConfig.RESULT_CODE, termsArray);
+
+
+        //divide reader to two readers - one for exams and one for terms
+//        String sExams = reader.getString(AppConfig.RESULT_CODE_MUL_EXAMS);
+//        String sTerms = reader.getString(AppConfig.RESULT_CODE_MUL_TERMS);
+//
+//        //remove first and last sign (its [ and ])
+//        sExams = sExams.substring(1, sExams.length() - 1);
+//        sTerms = sTerms.substring(1, sTerms.length() - 1);
+//
+//        JSONObject exams = new JSONObject(sExams);
+//        JSONObject terms = new JSONObject(sTerms);
+//
+//        //add "error -> false" to jsonobject
+//        exams.put(AppConfig.ERROR_CODE, false);
+//        terms.put(AppConfig.ERROR_CODE, false);
+
+        HashMap<Integer, Exam> examsHashMap = parseExams(exams.toString());
+        HashMap<Integer, Term> termsHashMap = parseTerms(terms.toString());
+
+
+        if (examsHashMap != null) {
+            outExams.putAll(examsHashMap);
+        }
+        if (termsHashMap != null) {
+            outTerms.putAll(termsHashMap);
+        }
+
     }
 
     private static long convertDateStringToLong(String dateText) {

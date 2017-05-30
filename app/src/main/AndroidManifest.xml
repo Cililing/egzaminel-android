@@ -14,18 +14,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.przemek.egzaminel._Activities.MainActivity">
+        <activity android:name="com.example.przemek.egzaminel.Activities.MainActivity"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.przemek.egzaminel._Activities.Exam.ExamActivity" />
-        <activity android:name="com.example.przemek.egzaminel._Activities.DataVies.GroupsActivity" />
-        <activity android:name="com.example.przemek.egzaminel._Activities.DataVies.ExamsActivity" />
-        <activity android:name="com.example.przemek.egzaminel._Activities.MainMenu" />
-        <activity android:name="com.example.przemek.egzaminel._Activities.Calendar.CalendarActivity"></activity>
+        <activity android:name=".Activities.Exam.ExamActivity" />
+        <activity android:name="com.example.przemek.egzaminel.Activities.DataVies.GroupsActivity" />
+        <activity android:name="com.example.przemek.egzaminel.Activities.DataVies.ExamsActivity" />
+        <activity android:name="com.example.przemek.egzaminel.Activities.MainMenu" />
+        <activity android:name=".Activities.Calendar.CalendarActivity"></activity>
     </application>
 
 </manifest>

@@ -1,15 +1,15 @@
-package com.example.przemek.egzaminel._Activities;
+package com.example.przemek.egzaminel.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
-import com.example.przemek.egzaminel._Activities.Calendar.CalendarActivity;
+import com.example.przemek.egzaminel.Activities.Calendar.CalendarActivity;
+import com.example.przemek.egzaminel.Activities.DataVies.GroupsActivity;
+import com.example.przemek.egzaminel.Activities.Exam.ExamActivity;
 import com.example.przemek.egzaminel.R;
-import com.example.przemek.egzaminel._Activities.DataVies.ExamsActivity;
-
-import java.util.ArrayList;
+import com.example.przemek.egzaminel.Activities.DataVies.ExamsActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,6 +44,12 @@ public class MainMenu extends AppCompatActivity {
     public void onListButtonClick() {
         Intent intent = new Intent(getApplicationContext(), ExamsActivity.class);
 
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.main_menu_datasrc_button)
+    public void onDataSrcButtonClick() {
+        Intent intent = new Intent(getApplicationContext(), GroupsActivity.class);
         startActivity(intent);
     }
 }
