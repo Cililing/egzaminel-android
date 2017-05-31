@@ -1,10 +1,12 @@
 package com.example.przemek.egzaminel.Database;
 
 
+import android.support.annotation.NonNull;
+
 import java.util.Date;
 import java.util.Objects;
 
-public class Term {
+public class Term implements Comparable<Term> {
 
     private int id = 0;
     private int exam_id = 0;
@@ -21,10 +23,6 @@ public class Term {
         this.place = place;
         this.entryDate = entryDate;
         this.lastUpdate = lastUpdate;
-    }
-
-    public boolean hasTheSameId(Term t) {
-        return t.id == this.id;
     }
 
     @Override
@@ -89,5 +87,10 @@ public class Term {
 
     public Date getFormattedLastUpdate() {
         return new Date(lastUpdate);
+    }
+
+    @Override
+    public int compareTo(@NonNull Term o) {
+        return (int) (date - o.date);
     }
 }

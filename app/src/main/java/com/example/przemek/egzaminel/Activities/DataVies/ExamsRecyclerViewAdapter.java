@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.przemek.egzaminel.DataExchanger.SessionManager;
 import com.example.przemek.egzaminel.Database.Exam;
 import com.example.przemek.egzaminel.Database.Term;
 import com.example.przemek.egzaminel.Interfaces.OnRWItemClickListener;
@@ -47,16 +48,19 @@ class ExamsRecyclerViewAdapter extends RecyclerView.Adapter<ExamsRecyclerViewAda
         holder.type.setText(exam.getType());
 
         //get term
-        Term term = exam.getUserTermOrDefault();
-        long time = term == null ? System.currentTimeMillis() : term.getDate();
+        Term term = SessionManager.getUserTermOrTheFirst(exam.getExamID());
+        if (term != null) {
+            long time = term.getDate();
+            DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(context);
+            DateFormat timeFormat = android.text.format.DateFormat.getTimeFormat(context);
+            Date date = new Date();
+            date.setTime(time);
 
-        DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(context);
-        DateFormat timeFormat = android.text.format.DateFormat.getTimeFormat(context);
-        Date date = new Date();
-        date.setTime(time);
+            String dateAndTime = dateFormat.format(date) + ", " + timeFormat.format(date);
+            holder.date.setText(dateAndTime);
 
-        String dateAndTime = dateFormat.format(date) + ", " + timeFormat.format(date);
-        holder.date.setText(dateAndTime);
+        }
+
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

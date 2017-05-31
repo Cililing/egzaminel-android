@@ -21,4 +21,9 @@
     <string name="groups_yes_no_message">Czy chcesz usunąć grupę? Danego działania nie da się cofnąć.</string>
     <string name="groups_yes_no_yes">Tak</string>
     <string name="exam_chose_your_term">Wybierz swój termin</string>
+    <string name="groups_is_waiting">Przetwarzam poprzednie żądanie...</string>
+    <string name="groups_group_already_in_dataset">Już dodałeś tą grupę!</string>
+    <string name="send_email">Wyślij maila!</string>
+    <string name="settigins_info">Aplikacja rozwojowa. Personalizacja w planie ;)</string>
+    <string name="about_me_shaking">Dobra, wystarczy</string>
 </resources>

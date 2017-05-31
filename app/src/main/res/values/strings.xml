@@ -30,5 +30,20 @@
     <string name="groups_yes_no_yes">Tak</string>
     <string name="groups_yes_no_no">Nie</string>
     <string name="exam_chose_your_term">Wybierz swój termin</string>
+    <string name="groups_is_waiting">Przetwarzam poprzednie żądanie...</string>
+    <string name="groups_group_already_in_dataset">Już dodałeś tą grupę!</string>
+    <string name="about_me_conent">Przemek Materna\n
+        Politechnika Wrocławska\n
+        Aplikacja jest zaliczeniem na SWiM.\n
+        Indeks: 228114\n
+        Enjoy and have fun!</string>
+    <string name="about_me_email">przemek.materna@gmail.com</string>
+    <string name="about_me_app_email">examappcreator@gmail.com</string>
+    <string name="send_email">Wyślij maila!</string>
+    <string name="settigins_info">Aplikacja rozwojowa. Personalizacja w planie ;)\n
+        Propozycje/pytania/opinie prosiłbym o kierowanie na poniższy adres email.\n
+        Jeżeli chcesz zobaczyć informacje o mnie, wstrząśnij.
+    </string>
+    <string name="about_me_shaking">Dobra, wystarczy</string>
 
 </resources>

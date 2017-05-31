@@ -1,10 +1,15 @@
 package com.example.przemek.egzaminel.DataExchanger;
 
+import android.content.Context;
+import android.support.annotation.Nullable;
+
 import com.example.przemek.egzaminel.Database.DatabaseHelper;
 import com.example.przemek.egzaminel.Database.Exam;
 import com.example.przemek.egzaminel.Database.Group;
 import com.example.przemek.egzaminel.Database.Term;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class SessionManager {
@@ -39,16 +44,40 @@ public class SessionManager {
         return userTerms;
     }
 
+    @Nullable
+    public static Term getUserTermOrTheFirst(int examId) {
+        Term term = terms.get(userTerms.get(examId));
 
-    public static void importDataFromDB(DatabaseHelper helper) {
+        if (term != null) {
+            return term;
+        }
+
+        //if not get first term
+        ArrayList<Term> terms = new ArrayList<>(getExams().get(examId).getTerms().values());
+        Collections.sort(terms);
+        return terms.size() > 0 ? terms.get(0) : null;
+}
+
+    public static void importDataFromDB(Context context) {
+
+        DatabaseHelper helper = new DatabaseHelper(context);
 
         groups.clear();
         exams.clear();
         terms.clear();
+        userTerms.clear();
 
         groups.putAll(helper.getAllGroups());
         exams.putAll(helper.getAllExams());
         terms.putAll(helper.getAllTerms());
+        userTerms.putAll(helper.getAllUserTerms());
+    }
+
+    public static void commitChangesUserterms(Context context) {
+
+        DatabaseHelper helper = new DatabaseHelper(context);
+        helper.updateAllUserterms(userTerms);
+
     }
 
 }

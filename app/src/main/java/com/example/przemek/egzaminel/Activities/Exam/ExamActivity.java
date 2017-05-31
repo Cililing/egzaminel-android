@@ -90,6 +90,7 @@ public class ExamActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
                 SessionManager.getUserTerms().put(exam.getExamID(), checkedId);
+                SessionManager.commitChangesUserterms(getApplicationContext());
                 //Tools.makeLongToast(getApplicationContext(), String.valueOf(checkedId));
             }
         });

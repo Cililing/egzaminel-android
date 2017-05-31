@@ -7,7 +7,7 @@ import com.example.przemek.egzaminel.Database.Exam;
 import com.example.przemek.egzaminel.Database.Group;
 import com.example.przemek.egzaminel.Database.Term;
 import com.example.przemek.egzaminel.Interfaces.OnResponseListener;
-import com.example.przemek.egzaminel.Interfaces.OnTaskExecuted;
+import com.example.przemek.egzaminel.Interfaces.OnTaskExecutedListener;
 import com.example.przemek.egzaminel.Network.AnswerParser;
 import com.example.przemek.egzaminel.Network.AppConfig;
 import com.example.przemek.egzaminel.Network.AppNetworkHandler;
@@ -27,11 +27,11 @@ public class Synchronizer {
     private Context context;
     DatabaseHelper databaseHelper;
     SynchronizeHelper synchronizeHelper;
-    OnTaskExecuted onTaskExecutedListener;
+    OnTaskExecutedListener onTaskExecutedListenerListener;
 
-    public Synchronizer(Context context, OnTaskExecuted onTaskExecutedListener) {
+    public Synchronizer(Context context, OnTaskExecutedListener onTaskExecutedListenerListener) {
         databaseHelper = new DatabaseHelper(context);
-        this.onTaskExecutedListener = onTaskExecutedListener;
+        this.onTaskExecutedListenerListener = onTaskExecutedListenerListener;
         synchronizeHelper = new SynchronizeHelper(databaseHelper);
         this.context = context;
     }
@@ -44,7 +44,7 @@ public class Synchronizer {
             //remove from internal database
             databaseHelper.deleteGroup(id);
             //all data connected with "id" will be removed.
-            SessionManager.importDataFromDB(databaseHelper);
+            SessionManager.importDataFromDB(context);
             return true;
         }
         else return false;
@@ -74,20 +74,20 @@ public class Synchronizer {
                     //groupHashMap is null, so parsing wasnt successful
                     //that means user put wrong data
                     if (groupHashMap == null) {
-                        onTaskExecutedListener.onTaskFailed();
+                        onTaskExecutedListenerListener.onTaskFailed();
                     }
 
 
                 } catch (JSONException e) {
                     Tools.makeLongToast(context, context.getString(R.string.database_error));
-                    onTaskExecutedListener.onTaskFailed();
+                    onTaskExecutedListenerListener.onTaskFailed();
                 }
             }
 
             @Override
             public void onResponseError(String tag, Object... params) {
                 Tools.makeLongToast(context, context.getString(R.string.network_error));
-                onTaskExecutedListener.onTaskFailed();
+                onTaskExecutedListenerListener.onTaskFailed();
             }
         });
     }
@@ -121,16 +121,16 @@ public class Synchronizer {
                     synchronizeHelper.synchronizeTerms(terms);
 
                     //add those data into session manager
-                    SessionManager.importDataFromDB(databaseHelper);
+                    SessionManager.importDataFromDB(context);
 
 
                     //tell them you finished your job
-                    if (onTaskExecutedListener != null) onTaskExecutedListener.onTaskFinished();
+                    if (onTaskExecutedListenerListener != null) onTaskExecutedListenerListener.onTaskFinished();
 
 
                 } catch (JSONException e) {
                     Tools.makeLongToast(context, context.getString(R.string.database_error));
-                    onTaskExecutedListener.onTaskFailed();
+                    onTaskExecutedListenerListener.onTaskFailed();
                 }
 
             }
@@ -138,7 +138,7 @@ public class Synchronizer {
             @Override
             public void onResponseError(String tag, Object... params) {
                 Tools.makeLongToast(context, context.getString(R.string.network_error));
-                onTaskExecutedListener.onTaskFailed();
+                onTaskExecutedListenerListener.onTaskFailed();
             }
         });
 

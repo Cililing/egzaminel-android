@@ -97,9 +97,7 @@ public class AnswerParser {
                     rawExam.optString(AppConfig.EXAM_DESCRIPTION, ""),
                     rawExam.optString(AppConfig.EXAM_MATERIALS, ""),
                     entryDate,
-                    lastUpdate,
-                    -1,
-                    "" //empty src path (src is user-value)
+                    lastUpdate
             );
             exams.put(id, exam);
         }

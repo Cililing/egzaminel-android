@@ -67,7 +67,6 @@ public class SynchronizeHelper {
 
             if (local != null && online != null) { //both exists
                 if (!local.equals(online)) {    //exams has changed
-                    online.setUserTermId(local.getUserTermId());
                     dbHelper.updateExam(online);
                     counter++; //update newer version of exam
                 }

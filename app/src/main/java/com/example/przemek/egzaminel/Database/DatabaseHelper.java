@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -15,12 +16,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //TAGS AND NAMES
     private static final String LOG = "DatabaseHelper";
-    private static final int DATABASE_VERSION = 14;
+    private static final int DATABASE_VERSION = 18;
     private static final String DATABASE_NAME = "UserExams";
 
     static final String TABlE_GROUPS = "groups";
     static final String TABLE_EXAMS = "exams";
     static final String TABLE_TERMS = "terms";
+    static final String TABLE_USERTERMS = "userterms";
 
     //COLUMN NAMES
     static final String GROUP_ID = "ID";
@@ -38,8 +40,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String EXAM_MATERIALS = "materials";
     static final String EXAM_ENTRY_DATE = "entry_date";
     static final String EXAM_LAST_UPDATE = "last_update";
-    static final String EXAM_USER_TERM_ID = "term_id";
-    static final String EXAM_PDF_SRC = "pdf_src";
 
     static final String TERMS_ID = "terms_id";
     static final String TERMS_EXAM_ID = "terms_exam_id";
@@ -47,6 +47,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String TERMS_PLACE = "term_place";
     static final String TERMS_ENTRY_DATE = "entry_date";
     static final String TERMS_LAST_UPDATE = "last_update";
+
+
+    //user terms id
+    static final String USERTERMS_EXAM_ID = "term_id";
+    static final String USERTERMS_TERM_ID = "exam_id";
 
     //statements
     static final String CREATE_TABLE_GROUPS = "CREATE TABLE "
@@ -68,8 +73,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + EXAM_MATERIALS + " TEXT, "
             + EXAM_ENTRY_DATE + " INTEGER, "
             + EXAM_LAST_UPDATE + " INTEGER, "
-            + EXAM_USER_TERM_ID + " INTEGER, "
-            + EXAM_PDF_SRC + " TEXT, "
             + " FOREIGN KEY (" + EXAM_GROUP_ID + ") REFERENCES "
             + TABlE_GROUPS + "(" + GROUP_ID + ")"
             + "ON DELETE CASCADE" + ")";
@@ -83,7 +86,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + TERMS_ENTRY_DATE + " INTEGER, "
             + TERMS_LAST_UPDATE + " INTEGER, "
             + "FOREIGN KEY (" + TERMS_EXAM_ID + ") REFERENCES "
-            + TABLE_EXAMS + "(" + EXAM_ID + ")"
+            + TABLE_EXAMS + "(" + EXAM_ID + ") "
+            + "ON DELETE CASCADE" + ")";
+
+
+
+    static final String CREATE_TABLE_USERTERMS = "CREATE TABLE "
+            + TABLE_USERTERMS + "("
+            + USERTERMS_EXAM_ID + " INTEGER, "
+            + USERTERMS_TERM_ID + " INTEGER, "
+            + "PRIMARY KEY (" + USERTERMS_EXAM_ID + ", " + USERTERMS_TERM_ID + "),"
+            + "FOREIGN KEY (" + USERTERMS_EXAM_ID + ") REFERENCES "
+            + TABLE_EXAMS + "(" + EXAM_ID + "), "
+            + "FOREIGN KEY (" + USERTERMS_TERM_ID + ") REFERENCES "
+            + TABLE_TERMS + "(" + TERMS_ID + ") "
             + "ON DELETE CASCADE" + ")";
 
     // </editor-fold>
@@ -99,6 +115,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE_GROUPS);
         db.execSQL(CREATE_TABLE_EXAMS);
         db.execSQL(CREATE_TABLE_TERMS);
+        db.execSQL(CREATE_TABLE_USERTERMS);
     }
 
     @Override
@@ -115,7 +132,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABlE_GROUPS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_EXAMS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_TERMS);
-
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERTERMS);
         onCreate(db);
     }
     // </editor-fold>
@@ -393,6 +410,76 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     // </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="Userterms methods">
+
+    public long createUserterm(int examId, int termId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(USERTERMS_EXAM_ID, examId);
+        values.put(USERTERMS_TERM_ID, termId);
+
+        long res = db.insert(TABLE_USERTERMS, null, values);
+        db.close();
+        return res;
+    }
+
+    public long[] updateAllUserterms(HashMap<Integer, Integer> newUserTerms) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        //drop old data
+        db.execSQL("DELETE FROM " + TABLE_USERTERMS);
+
+        long[] res = new long[newUserTerms.size()];
+
+        int k = 0;
+        for (Map.Entry<Integer, Integer> entry : newUserTerms.entrySet()) {
+            ContentValues values = new ContentValues();
+            values.put(USERTERMS_EXAM_ID, entry.getKey());
+            values.put(USERTERMS_TERM_ID, entry.getValue());
+            res[k] = db.insert(TABLE_USERTERMS, null, values);
+            k++;
+        }
+
+        db.close();
+        return res;
+    }
+
+    public HashMap<Integer, Integer> getAllUserTerms() {
+
+        SQLiteDatabase db = getReadableDatabase();
+        HashMap<Integer, Integer> userTerms = new HashMap<>();
+
+        String query = "SELECT * FROM " + TABLE_USERTERMS;
+        Log.e(LOG, query);
+
+        Cursor c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            do {
+                int examId = c.getInt(c.getColumnIndex(USERTERMS_EXAM_ID));
+                int termId = c.getInt(c.getColumnIndex(USERTERMS_TERM_ID));
+                userTerms.put(examId, termId);
+            } while (c.moveToNext());
+        }
+
+        c.close();
+        db.close();
+        return userTerms;
+    }
+
+    public int updateUserterm(int examId, int termId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        return 0;
+    }
+
+    public void deleteUserTerm(int examId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_USERTERMS, USERTERMS_EXAM_ID + " = ?", new String[]{String.valueOf(examId)});
+        db.close();
+    }
+    // </editor-fold>
+
     // <editor-fold defaultstate="collapsed" desc="Init/ContentValues methods">
     private Group initGroup(Cursor c) {
         return new Group(
@@ -414,9 +501,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 c.getString(c.getColumnIndex(EXAM_DESCRIPTION)),
                 c.getString(c.getColumnIndex(EXAM_MATERIALS)),
                 c.getLong(c.getColumnIndex(EXAM_ENTRY_DATE)),
-                c.getLong(c.getColumnIndex(EXAM_LAST_UPDATE)),
-                c.getInt(c.getColumnIndex(EXAM_USER_TERM_ID)),
-                c.getString(c.getColumnIndex(EXAM_PDF_SRC))
+                c.getLong(c.getColumnIndex(EXAM_LAST_UPDATE))
         );
     }
 
@@ -450,10 +535,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(EXAM_TEACHER, exam.getTeacher());
         values.put(EXAM_DESCRIPTION, exam.getDescription());
         values.put(EXAM_MATERIALS, exam.getMaterialsPath());
-        values.put(EXAM_USER_TERM_ID, exam.getUserTermId());
         values.put(EXAM_ENTRY_DATE, exam.getEntryDate());
         values.put(EXAM_LAST_UPDATE, exam.getLastUpdate());
-        values.put(EXAM_PDF_SRC, exam.getPdfSrc());
         return values;
     }
 

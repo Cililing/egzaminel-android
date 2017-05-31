@@ -24,12 +24,9 @@ public class Exam implements Serializable, Cloneable {
     private long entryDate = 0;
     private long lastUpdate = 0;
 
-    private int userTermId = -1;
-    private String pdfSrc = "";
-
     public Exam(int examID, int groupID,
                 String subject, String type, String teacher, String description, String materialsPath,
-                long entryDate, long lastUpdate, int userTermId, String pdfSrc) {
+                long entryDate, long lastUpdate) {
         this.examID = examID;
         this.groupID = groupID;
         this.subject = subject;
@@ -39,8 +36,6 @@ public class Exam implements Serializable, Cloneable {
         this.materialsPath = materialsPath;
         this.entryDate = entryDate;
         this.lastUpdate = lastUpdate;
-        this.userTermId = userTermId;
-        this.pdfSrc = pdfSrc;
     }
 
     public Exam(Exam exam) {
@@ -53,8 +48,6 @@ public class Exam implements Serializable, Cloneable {
         this.materialsPath = exam.materialsPath;
         this.entryDate = exam.entryDate;
         this.lastUpdate = exam.lastUpdate;
-        this.userTermId = exam.userTermId;
-        this.pdfSrc = exam.pdfSrc;
     }
 
     public boolean hasTheSameId(Exam e) {
@@ -98,8 +91,7 @@ public class Exam implements Serializable, Cloneable {
                 + description + ", "
                 + materialsPath + ", "
                 + getFormattedEntryDate() + ", "
-                + getFormattedLastUpdate() + ", "
-                + userTermId;
+                + getFormattedLastUpdate();
         s += ")";
         return s;
     }
@@ -146,44 +138,6 @@ public class Exam implements Serializable, Cloneable {
 
     public Date getFormattedLastUpdate() {
         return new Date(lastUpdate);
-    }
-
-    public String getPdfSrc() {
-        return pdfSrc;
-    }
-
-    public void setPdfSrc(String pdfSrc) {
-        this.pdfSrc = pdfSrc;
-    }
-
-    public int getUserTermId() {
-        return userTermId;
-    }
-
-    public void setUserTermId(int userTermId) {
-        this.userTermId = userTermId;
-    }
-
-    public Term getUserTermOrDefault() {
-
-
-        HashMap<Integer, Term> termsMap = getTerms();
-
-        if (termsMap.containsKey(userTermId)) {
-            return termsMap.get(userTermId);
-        }
-
-        List<Term> terms = new ArrayList<>();
-        terms.addAll(termsMap.values());
-        Collections.sort(terms, new Comparator<Term>() {
-            @Override
-            public int compare(Term o1, Term o2) {
-                return (int) (o1.getDate() - o2.getDate());
-            }
-        });
-
-        if (terms.size() > 0) return terms.get(0);
-        return terms.size() == 0 ? null : terms.get(0);
     }
 
     public HashMap<Integer, Term> getTerms() {

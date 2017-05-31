@@ -1,16 +1,14 @@
 package com.example.przemek.egzaminel.Activities.DataVies;
 
 import android.app.FragmentManager;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.przemek.egzaminel.Activities.Static.BundleTags;
-import com.example.przemek.egzaminel.Interfaces.OnTaskExecuted;
+import com.example.przemek.egzaminel.Interfaces.OnTaskExecutedListener;
 import com.example.przemek.egzaminel.DataExchanger.Synchronizer;
 import com.example.przemek.egzaminel.DataExchanger.SessionManager;
 import com.example.przemek.egzaminel.Database.Group;
@@ -40,6 +38,8 @@ public class GroupsActivity extends AppCompatActivity {
     TextView inputId;
     @BindView(R.id.groups_input_group_password)
     TextView inputPassword;
+
+    private static boolean addedIsWaiting = false;
 
 
     private OnRWItemClickListener<Group> rwItemClickListener = new OnRWItemClickListener<Group>() {
@@ -88,28 +88,45 @@ public class GroupsActivity extends AppCompatActivity {
     @OnClick(R.id.groups_input_button_add)
     public void onAddButton() {
 
+        if (addedIsWaiting) {
+            Tools.makeLongToast(getApplicationContext(), getString(R.string.groups_is_waiting));
+            return;
+        }
+
+        //set true...
+        addedIsWaiting = true;
+
         int id = -1;
         try {
             id = Integer.parseInt(String.valueOf(inputId.getText()));
         } catch (NumberFormatException ignored) {
             Tools.makeLongToast(getApplicationContext(), getString(R.string.wrong_data_input));
             return;
+        } finally {
+            addedIsWaiting = false;
+        }
+
+        //check if you already have group with that id in your data
+        if (SessionManager.getGroups().containsKey(id)) {
+
+            Tools.makeLongToast(getApplicationContext(), getString(R.string.groups_group_already_in_dataset));
+            addedIsWaiting = false;
         }
 
        String password = String.valueOf(inputPassword.getText());
-
-       Synchronizer synchronizer = new Synchronizer(getApplicationContext(), new OnTaskExecuted() {
+       Synchronizer synchronizer = new Synchronizer(getApplicationContext(), new OnTaskExecutedListener() {
            @Override
            public void onTaskFinished(Object... params) {
                Tools.makeLongToast(getApplicationContext(), getString(R.string.synchronization_finished));
                groupsRWFragment.updateDataSet(new ArrayList<>(SessionManager.getGroups().values()));
-
+               addedIsWaiting = false;
                //Tools.reloadFragment(fragmentManager, groupsRWFragment, null, R.id.groups_main_container, TAG);
            }
 
            @Override
            public void onTaskFailed(Object... params) {
                Tools.makeLongToast(getApplicationContext(), getString(R.string.wrong_data_input));
+               addedIsWaiting = false;
            }
        });
 

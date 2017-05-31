@@ -37,11 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public void dontLogIn() {
 
         //load data to SessionManager
-        DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
-
-        SessionManager.getGroups().putAll(databaseHelper.getAllGroups());
-        SessionManager.getExams().putAll(databaseHelper.getAllExams());
-        SessionManager.getTerms().putAll(databaseHelper.getAllTerms());
+        SessionManager.importDataFromDB(getApplicationContext());
 
         //start new activity
         Intent i = new Intent(getApplicationContext(), MainMenu.class);

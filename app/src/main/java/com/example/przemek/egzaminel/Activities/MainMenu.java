@@ -43,13 +43,18 @@ public class MainMenu extends AppCompatActivity {
     @OnClick(R.id.main_menu_list_button)
     public void onListButtonClick() {
         Intent intent = new Intent(getApplicationContext(), ExamsActivity.class);
-
         startActivity(intent);
     }
 
     @OnClick(R.id.main_menu_datasrc_button)
     public void onDataSrcButtonClick() {
         Intent intent = new Intent(getApplicationContext(), GroupsActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.main_menu_settigins_button)
+    public void onSettiginsButtonClick() {
+        Intent intent = new Intent(getApplicationContext(), SettiginsActivity.class);
         startActivity(intent);
     }
 }

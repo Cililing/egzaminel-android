@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import com.example.przemek.egzaminel.Activities.Static.BundleTags;
 import com.example.przemek.egzaminel.DataExchanger.SessionManager;
 import com.example.przemek.egzaminel.Database.Exam;
+import com.example.przemek.egzaminel.Database.Term;
 import com.example.przemek.egzaminel.Interfaces.OnSwitchChangedListener;
 import com.example.przemek.egzaminel.R;
 import com.example.przemek.egzaminel.Tools.Tools;
@@ -73,16 +74,28 @@ public class ExamsActivity extends AppCompatActivity {
 
     private void tryLoadFragment() {
 
-//        //fragment1
-//        List<Exam> list = new ArrayList<>();
-//        list.addAll(examsMap.values());
 
         examsRecyclerViewFragment = ExamsRecyclerViewFragment.getInstance(getActiveExams(), new Comparator<Exam>() {
             @Override
             public int compare(Exam o1, Exam o2) {
-                return (int)
-                        (o1.getUserTermOrDefault().getDate()
-                                - o2.getUserTermOrDefault().getDate());
+                //get from sessionmanager date of o1 and o2 (if saved)
+                Term d1 = SessionManager.getUserTermOrTheFirst(o1.getExamID());
+                Term d2 = SessionManager.getUserTermOrTheFirst(o2.getExamID());
+
+
+                if (d1 == null && d2 == null) {
+                    return 0;
+                }
+                if (d1 != null && d2 != null) {
+                    return (int) (d1.getDate() - d2.getDate());
+                }
+
+                if (d1 != null && d2 == null) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+
             }
         });
         Tools.reloadFragment(fragmentManager, examsRecyclerViewFragment, null, R.id.exams_main_container, TAG);

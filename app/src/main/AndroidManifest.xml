@@ -7,14 +7,15 @@
     <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
 
     <application
-        android:name="com.example.przemek.egzaminel.Network.AppNetworkController"
+        android:name=".Network.AppNetworkController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.przemek.egzaminel.Activities.MainActivity"
+        <activity
+            android:name=".Activities.MainActivity"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,10 +24,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.Exam.ExamActivity" />
-        <activity android:name="com.example.przemek.egzaminel.Activities.DataVies.GroupsActivity" />
-        <activity android:name="com.example.przemek.egzaminel.Activities.DataVies.ExamsActivity" />
-        <activity android:name="com.example.przemek.egzaminel.Activities.MainMenu" />
-        <activity android:name=".Activities.Calendar.CalendarActivity"></activity>
+        <activity android:name=".Activities.DataVies.GroupsActivity" />
+        <activity android:name=".Activities.DataVies.ExamsActivity" />
+        <activity android:name=".Activities.MainMenu" />
+        <activity android:name=".Activities.Calendar.CalendarActivity" />
+        <activity android:name=".Activities.AboutMeActivity" />
+        <activity android:name=".Activities.SettiginsActivity"></activity>
     </application>
 
 </manifest>

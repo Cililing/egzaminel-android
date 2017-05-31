@@ -1,6 +1,6 @@
 package com.example.przemek.egzaminel.Interfaces;
 
-public interface OnTaskExecuted {
+public interface OnTaskExecutedListener {
 
     public void onTaskFinished(Object... params);
     public void onTaskFailed(Object... params);
