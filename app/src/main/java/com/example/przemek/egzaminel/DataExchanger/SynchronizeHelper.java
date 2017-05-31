@@ -18,6 +18,7 @@ public class SynchronizeHelper {
         this.dbHelper = dbHelper;
     }
 
+    @Deprecated
     public int synchronizeGroups(HashMap<Integer, Group> newGroups) {
 
         int counter = 0;
