@@ -158,22 +158,6 @@ public class AnswerParser {
         exams.put(AppConfig.RESULT_CODE, examsArray);
         terms.put(AppConfig.RESULT_CODE, termsArray);
 
-
-        //divide reader to two readers - one for exams and one for terms
-//        String sExams = reader.getString(AppConfig.RESULT_CODE_MUL_EXAMS);
-//        String sTerms = reader.getString(AppConfig.RESULT_CODE_MUL_TERMS);
-//
-//        //remove first and last sign (its [ and ])
-//        sExams = sExams.substring(1, sExams.length() - 1);
-//        sTerms = sTerms.substring(1, sTerms.length() - 1);
-//
-//        JSONObject exams = new JSONObject(sExams);
-//        JSONObject terms = new JSONObject(sTerms);
-//
-//        //add "error -> false" to jsonobject
-//        exams.put(AppConfig.ERROR_CODE, false);
-//        terms.put(AppConfig.ERROR_CODE, false);
-
         HashMap<Integer, Exam> examsHashMap = parseExams(exams.toString());
         HashMap<Integer, Term> termsHashMap = parseTerms(terms.toString());
 

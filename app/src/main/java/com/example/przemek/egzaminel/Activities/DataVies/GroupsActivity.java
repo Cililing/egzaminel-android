@@ -1,7 +1,9 @@
 package com.example.przemek.egzaminel.Activities.DataVies;
 
 import android.app.FragmentManager;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -59,25 +61,6 @@ public class GroupsActivity extends AppCompatActivity {
         }
     };
 
-
-    private OnGroupItemClickListener deleteButtonClickListener = new OnGroupItemClickListener() {
-
-        @Override
-        public void onClick(Group group, int position, Object... params) {
-            //remove group
-            Synchronizer synchronizer = new Synchronizer(getApplicationContext(), null);
-            synchronizer.removeGroup(group.getId());
-
-            //update your groups
-            groups = SessionManager.getGroups();
-
-            //inform recyclerView groupsRWFragment about change
-            groupsRWFragment.updateDataSet(new ArrayList<>(groups.values()));
-        }
-
-    };
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,5 +116,56 @@ public class GroupsActivity extends AppCompatActivity {
        synchronizer.addGroup(id, password);
 
     }
+
+
+    private OnGroupItemClickListener deleteButtonClickListener = new OnGroupItemClickListener() {
+
+        @Override
+        public void onClick(final Group group, int position, Object... params) {
+
+            Synchronizer synchronizer = new Synchronizer(getApplicationContext(), null);
+            synchronizer.removeGroup(group.getId());
+
+            //update your groups
+            groups = SessionManager.getGroups();
+
+            //inform recyclerView groupsRWFragment about change
+            groupsRWFragment.updateDataSet(new ArrayList<>(groups.values()));
+
+            /* Yes-No dialog (but it doesnt work :( )
+            //remove group
+            //show yes no dialog
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(getApplicationContext());
+
+            //set title
+            alertDialog.setTitle(R.string.groups_yes_no_title);
+            //set dialog message
+            alertDialog.setMessage(R.string.groups_yes_no_message);
+            alertDialog.setPositiveButton(R.string.groups_yes_no_yes, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Synchronizer synchronizer = new Synchronizer(getApplicationContext(), null);
+                    synchronizer.removeGroup(group.getId());
+
+                    //update your groups
+                    groups = SessionManager.getGroups();
+
+                    //inform recyclerView groupsRWFragment about change
+                    groupsRWFragment.updateDataSet(new ArrayList<>(groups.values()));
+                }
+            });
+
+            alertDialog.setNegativeButton(R.string.groups_yes_no_no, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //do nothing
+                }
+            });
+
+            alertDialog.show();
+            */
+        }
+
+    };
 
 }

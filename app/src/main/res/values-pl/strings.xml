@@ -17,4 +17,8 @@
     <string name="main_menu_settigins">Ustawienia</string>
     <string name="wrong_data_input">Nieprawidłowe dane.</string>
     <string name="groups_input_label">Podaj dane grupy</string>
+    <string name="groups_yes_no_title">Potwierdź...</string>
+    <string name="groups_yes_no_message">Czy chcesz usunąć grupę? Danego działania nie da się cofnąć.</string>
+    <string name="groups_yes_no_yes">Tak</string>
+    <string name="exam_chose_your_term">Wybierz swój termin</string>
 </resources>

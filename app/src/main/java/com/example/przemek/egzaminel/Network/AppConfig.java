@@ -58,6 +58,6 @@ public class AppConfig {
     //term
     public static final String TERM_EXAM_ID = "exam_id";
     public static final String TERM_DATE = "date";
-    public static final String TERM_PLACE = "TERM_PLACE";
+    public static final String TERM_PLACE = "place";
 
 }

@@ -16,7 +16,7 @@ public class SessionManager {
     private static HashMap<Integer, Group> groups = new HashMap<>();
     private static HashMap<Integer, Exam> exams = new HashMap<>();
     private static HashMap<Integer, Term> terms = new HashMap<>();
-    private static HashMap<Integer, Integer> userTerms = new HashMap<>();
+    private static HashMap<Integer, Integer> userTerms = new HashMap<>(); //examId, termId
 
 
     public static int getUserId() {
