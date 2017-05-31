@@ -21,12 +21,11 @@ public class Exam implements Serializable, Cloneable {
     private String description = "";
     private String teacher = "";
     private String materialsPath = "";
-    private long entryDate = 0;
     private long lastUpdate = 0;
 
     public Exam(int examID, int groupID,
                 String subject, String type, String teacher, String description, String materialsPath,
-                long entryDate, long lastUpdate) {
+                long lastUpdate) {
         this.examID = examID;
         this.groupID = groupID;
         this.subject = subject;
@@ -34,7 +33,6 @@ public class Exam implements Serializable, Cloneable {
         this.teacher = teacher;
         this.description = description;
         this.materialsPath = materialsPath;
-        this.entryDate = entryDate;
         this.lastUpdate = lastUpdate;
     }
 
@@ -46,7 +44,6 @@ public class Exam implements Serializable, Cloneable {
         this.teacher = exam.teacher;
         this.description = exam.description;
         this.materialsPath = exam.materialsPath;
-        this.entryDate = exam.entryDate;
         this.lastUpdate = exam.lastUpdate;
     }
 
@@ -90,7 +87,6 @@ public class Exam implements Serializable, Cloneable {
                 + teacher + ", "
                 + description + ", "
                 + materialsPath + ", "
-                + getFormattedEntryDate() + ", "
                 + getFormattedLastUpdate();
         s += ")";
         return s;
@@ -124,16 +120,8 @@ public class Exam implements Serializable, Cloneable {
         return groupID;
     }
 
-    public long getEntryDate() {
-        return entryDate;
-    }
-
     public long getLastUpdate() {
         return lastUpdate;
-    }
-
-    public Date getFormattedEntryDate() {
-        return new Date(entryDate);
     }
 
     public Date getFormattedLastUpdate() {

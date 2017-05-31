@@ -9,14 +9,12 @@ public class Group {
     private int id;
     private String name;
     private String description;
-    private long entryDate;
     private long lastUpdate;
 
-    public Group (int id, String name, String description, long entryDate, long lastUpdate) {
+    public Group (int id, String name, String description, long lastUpdate) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.entryDate = entryDate;
         this.lastUpdate = lastUpdate;
     }
 
@@ -45,7 +43,6 @@ public class Group {
         s +=    id + ", "
                 + name + ", "
                 + description + ", "
-                + getFormattedEntryDate() + ", "
                 + getFormattedLastUpdate() + ")";
         return s;
     }
@@ -63,16 +60,8 @@ public class Group {
         return description;
     }
 
-    public long getEntryDate() {
-        return entryDate;
-    }
-
     public long getLastUpdate() {
         return lastUpdate;
-    }
-
-    public Date getFormattedEntryDate() {
-        return new Date(entryDate);
     }
 
     public Date getFormattedLastUpdate() {

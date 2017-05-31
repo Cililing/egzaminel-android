@@ -8,16 +8,17 @@ public class AppConfig {
     static final String BASADATE_DATETIME_REG = "yyyy-MM-dd HH:mm:ss";
 
 
-    public static final String EXAMS_BY_GROUP = "http://192.168.0.103/examapp/exams_by_group_id.php";
-    public static final String GROUPS_BY_USER_ID = "http://192.168.0.103/examapp/groups_by_user_id.php";
-    public static final String TERMS_BY_EXAM_ID = "http://192.168.0.103/examapp/terms_by_exam_id.php";
-    public static final String EXAMS_BY_USER_ID = "http://192.168.0.103/examapp/exams_by_user_id.php";
-    public static final String TERMS_BY_USER_ID = "http://192.168.0.103/examapp/terms_by_user_id.php";
-    public static final String GROUP_BY_GROUP_ID_AND_PASSWORD = "http://192.168.0.103/examapp/group_by_group_id_and_password.php";
-    public static final String EXAMS_AND_TERMS_BY_GROUPS_IDS = "http://192.168.0.103/examapp/exams_and_terms_by_groups_ids.php";
+    public static final String URL_ADDRESS = "http://serwer1757813.home.pl";
+    public static final String EXAMS_BY_GROUP = URL_ADDRESS + "/egzaminelAPI/exams_by_group_id.php";
+    public static final String GROUPS_BY_USER_ID = URL_ADDRESS +  "/egzaminelAPI/groups_by_user_id.php";
+    public static final String TERMS_BY_EXAM_ID = URL_ADDRESS +  "/egzaminelAPI/terms_by_exam_id.php";
+    public static final String EXAMS_BY_USER_ID = URL_ADDRESS +  "/egzaminelAPI/exams_by_user_id.php";
+    public static final String TERMS_BY_USER_ID = URL_ADDRESS +  "/egzaminelAPI/terms_by_user_id.php";
 
-    //log in
-    public static final String LOG_IN_BY_USERNAME_AND_PASSWORD = "http://192.168.0.103/examapp/simple_login.php";
+    public static final String GROUP_BY_GROUP_ID_AND_PASSWORD = URL_ADDRESS + "/egzaminelAPI/group_by_group_id_and_password.php";
+    public static final String EXAMS_AND_TERMS_BY_GROUPS_IDS = URL_ADDRESS + "/egzaminelAPI/exams_and_terms_by_groups_ids.php";
+
+    //log in//192.168.0.103/
     public static final String LOG_IN_USERNAME = "username";
     public static final String LOG_IN_PASSWORD = "password";
     public static final String LOG_IN_ID = "id";
@@ -52,7 +53,6 @@ public class AppConfig {
     public static final String EXAM_DESCRIPTION = "description";
     public static final String EXAM_TEACHER = "teacher";
     public static final String EXAM_MATERIALS = "materials";
-    public static final String EXAM_ENTRY_DATE = "entry_date";
     public static final String EXAM_LAST_UPDATE = "last_update";
 
     //term

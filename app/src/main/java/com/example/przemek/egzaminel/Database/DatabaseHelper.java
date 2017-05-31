@@ -16,7 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //TAGS AND NAMES
     private static final String LOG = "DatabaseHelper";
-    private static final int DATABASE_VERSION = 18;
+    private static final int DATABASE_VERSION = 20;
     private static final String DATABASE_NAME = "UserExams";
 
     static final String TABlE_GROUPS = "groups";
@@ -28,7 +28,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String GROUP_ID = "ID";
     static final String GROUP_NAME = "name";
     static final String GROUP_DESCRIPTION = "description";
-    static final String GROUP_ENTRY_DATE = "entry_date";
     static final String GROUP_LAST_UPDATE = "last_update";
 
     static final String EXAM_ID = "exam_id";
@@ -38,14 +37,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String EXAM_TEACHER = "teacher";
     static final String EXAM_DESCRIPTION = "description";
     static final String EXAM_MATERIALS = "materials";
-    static final String EXAM_ENTRY_DATE = "entry_date";
     static final String EXAM_LAST_UPDATE = "last_update";
 
     static final String TERMS_ID = "terms_id";
     static final String TERMS_EXAM_ID = "terms_exam_id";
     static final String TERMS_DATE = "date";
     static final String TERMS_PLACE = "term_place";
-    static final String TERMS_ENTRY_DATE = "entry_date";
     static final String TERMS_LAST_UPDATE = "last_update";
 
 
@@ -59,7 +56,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + GROUP_ID + " INTEGER PRIMARY KEY, "
             + GROUP_NAME + " TEXT, "
             + GROUP_DESCRIPTION + " TEXT, "
-            + GROUP_ENTRY_DATE + " INTEGER, "
             + GROUP_LAST_UPDATE + " INTEGER" + ")";
 
     static final String CREATE_TABLE_EXAMS = "CREATE TABLE "
@@ -71,7 +67,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + EXAM_DESCRIPTION + " TEXT, "
             + EXAM_TEACHER + " TEXT, "
             + EXAM_MATERIALS + " TEXT, "
-            + EXAM_ENTRY_DATE + " INTEGER, "
             + EXAM_LAST_UPDATE + " INTEGER, "
             + " FOREIGN KEY (" + EXAM_GROUP_ID + ") REFERENCES "
             + TABlE_GROUPS + "(" + GROUP_ID + ")"
@@ -83,7 +78,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + TERMS_EXAM_ID + " INTEGER, "
             + TERMS_DATE + " INTEGER, " //STORING DATE AS NUMBER OF SECOND SINCE 1970-01-01
             + TERMS_PLACE + " TEXT, "
-            + TERMS_ENTRY_DATE + " INTEGER, "
             + TERMS_LAST_UPDATE + " INTEGER, "
             + "FOREIGN KEY (" + TERMS_EXAM_ID + ") REFERENCES "
             + TABLE_EXAMS + "(" + EXAM_ID + ") "
@@ -486,7 +480,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 c.getInt(c.getColumnIndex(GROUP_ID)),
                 c.getString(c.getColumnIndex(GROUP_NAME)),
                 c.getString(c.getColumnIndex(GROUP_DESCRIPTION)),
-                c.getLong(c.getColumnIndex(GROUP_ENTRY_DATE)),
                 c.getLong(c.getColumnIndex(GROUP_LAST_UPDATE))
         );
     }
@@ -500,7 +493,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 c.getString(c.getColumnIndex(EXAM_TEACHER)),
                 c.getString(c.getColumnIndex(EXAM_DESCRIPTION)),
                 c.getString(c.getColumnIndex(EXAM_MATERIALS)),
-                c.getLong(c.getColumnIndex(EXAM_ENTRY_DATE)),
                 c.getLong(c.getColumnIndex(EXAM_LAST_UPDATE))
         );
     }
@@ -511,7 +503,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 c.getInt(c.getColumnIndex(TERMS_EXAM_ID)),
                 c.getLong(c.getColumnIndex(TERMS_DATE)),
                 c.getString(c.getColumnIndex(TERMS_PLACE)),
-                c.getLong(c.getColumnIndex(TERMS_ENTRY_DATE)),
                 c.getLong(c.getColumnIndex(TERMS_LAST_UPDATE))
         );
     }
@@ -521,7 +512,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(GROUP_ID, group.getId());
         values.put(GROUP_NAME, group.getName());
         values.put(GROUP_DESCRIPTION, group.getDescription());
-        values.put(GROUP_ENTRY_DATE, group.getEntryDate());
         values.put(GROUP_LAST_UPDATE, group.getLastUpdate());
         return values;
     }
@@ -535,7 +525,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(EXAM_TEACHER, exam.getTeacher());
         values.put(EXAM_DESCRIPTION, exam.getDescription());
         values.put(EXAM_MATERIALS, exam.getMaterialsPath());
-        values.put(EXAM_ENTRY_DATE, exam.getEntryDate());
         values.put(EXAM_LAST_UPDATE, exam.getLastUpdate());
         return values;
     }
@@ -546,7 +535,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(TERMS_EXAM_ID, term.getExam_id());
         values.put(TERMS_DATE, term.getDate());
         values.put(TERMS_PLACE, term.getPlace());
-        values.put(TERMS_ENTRY_DATE, term.getEntryDate());
         values.put(TERMS_LAST_UPDATE, term.getLastUpdate());
         return values;
     }

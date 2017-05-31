@@ -1,7 +1,5 @@
 package com.example.przemek.egzaminel.Network;
 
-import android.widget.TextView;
-
 import com.example.przemek.egzaminel.Database.Exam;
 import com.example.przemek.egzaminel.Database.Group;
 import com.example.przemek.egzaminel.Database.Term;
@@ -51,8 +49,6 @@ public class AnswerParser {
             JSONObject rawGroup = rawGroups.optJSONObject(i);
 
             //convert date
-            String entryDateString = rawGroup.optString(AppConfig.EXAM_ENTRY_DATE, AppConfig.DATE_DEFAULT);
-            long entryDate = convertDateStringToLong(entryDateString);
             String lastUpdateString = rawGroup.optString(AppConfig.EXAM_LAST_UPDATE, AppConfig.DATE_DEFAULT);
             long lastUpdate = convertDateStringToLong(lastUpdateString);
 
@@ -61,7 +57,6 @@ public class AnswerParser {
                     id,
                     rawGroup.optString(AppConfig.GROUP_NAME, ""),
                     rawGroup.optString(AppConfig.GROUP_DESCRIPTION, ""),
-                    entryDate,
                     lastUpdate
             );
 
@@ -81,9 +76,7 @@ public class AnswerParser {
         for (int i = 0; i < rawExams.length(); i++) {
             JSONObject rawExam = rawExams.optJSONObject(i);
 
-            //convert dates
-            String entryDateString = rawExam.optString(AppConfig.EXAM_ENTRY_DATE, AppConfig.DATE_DEFAULT);
-            long entryDate = convertDateStringToLong(entryDateString);
+            //convert date
             String lastUpdateString = rawExam.optString(AppConfig.EXAM_LAST_UPDATE, AppConfig.DATE_DEFAULT);
             long lastUpdate = convertDateStringToLong(lastUpdateString);
 
@@ -96,7 +89,6 @@ public class AnswerParser {
                     rawExam.optString(AppConfig.EXAM_TEACHER, ""),
                     rawExam.optString(AppConfig.EXAM_DESCRIPTION, ""),
                     rawExam.optString(AppConfig.EXAM_MATERIALS, ""),
-                    entryDate,
                     lastUpdate
             );
             exams.put(id, exam);
@@ -117,8 +109,6 @@ public class AnswerParser {
             //convert dates
             String dateText = rawTerm.optString(AppConfig.TERM_DATE, AppConfig.DATE_DEFAULT);
             long time = convertDateStringToLong(dateText);
-            String entryDateString = rawTerm.optString(AppConfig.EXAM_ENTRY_DATE, AppConfig.DATE_DEFAULT);
-            long entryDate = convertDateStringToLong(entryDateString);
             String lastUpdateString = rawTerm.optString(AppConfig.EXAM_LAST_UPDATE, AppConfig.DATE_DEFAULT);
             long lastUpdate = convertDateStringToLong(lastUpdateString);
 
@@ -128,7 +118,6 @@ public class AnswerParser {
                     rawTerm.optInt(AppConfig.TERM_EXAM_ID, -1),
                     time,
                     rawTerm.optString(AppConfig.TERM_PLACE, ""),
-                    entryDate,
                     lastUpdate
             );
             terms.put(id, term);
