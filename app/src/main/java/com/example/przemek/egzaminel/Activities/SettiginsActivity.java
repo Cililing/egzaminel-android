@@ -10,6 +10,9 @@ import android.os.Bundle;
 import com.example.przemek.egzaminel.Interfaces.OnShakeListener;
 import com.example.przemek.egzaminel.R;
 import com.example.przemek.egzaminel.Tools.ShakeDetector;
+import com.example.przemek.egzaminel.Tools.Tools;
+
+import butterknife.OnClick;
 
 public class SettiginsActivity extends AppCompatActivity {
 
@@ -35,6 +38,11 @@ public class SettiginsActivity extends AppCompatActivity {
     public void onPause() {
         mSensorManager.unregisterListener(mShakeDetector);
         super.onPause();
+    }
+
+    @OnClick(R.id.settigins_email)
+    public void onEmailClick() {
+        Tools.openEmailIntent(getApplicationContext(), R.string.about_me_app_email);
     }
 
     private void initShakeDetector() {

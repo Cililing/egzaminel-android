@@ -16,7 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //TAGS AND NAMES
     private static final String LOG = "DatabaseHelper";
-    private static final int DATABASE_VERSION = 20;
+    private static final int DATABASE_VERSION = 21;
     private static final String DATABASE_NAME = "UserExams";
 
     static final String TABlE_GROUPS = "groups";

@@ -31,13 +31,7 @@ public class AboutMeActivity extends AppCompatActivity {
 
     @OnClick(R.id.about_me_email)
     public void onEmailClick() {
-        final Intent emailIntent = new Intent(Intent.ACTION_SEND);
-
-        //fill it with data
-        emailIntent.setType("plain/text");
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{ getString(R.string.about_me_email) });
-
-        startActivity(Intent.createChooser(emailIntent, getString(R.string.send_email)));
+        Tools.openEmailIntent(getApplicationContext(), R.string.about_me_email);
     }
 
 

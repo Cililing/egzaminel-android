@@ -5,11 +5,15 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.annotation.StringRes;
 import android.widget.Toast;
+
+import com.example.przemek.egzaminel.R;
 
 public class Tools {
 
@@ -42,5 +46,14 @@ public class Tools {
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
+    public static void openEmailIntent(Context context, @StringRes int idEmail) {
+
+        final Intent emailIntent = new Intent(Intent.ACTION_SEND);
+
+        //fill it with data
+        emailIntent.setType("plain/text");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{ context.getString(R.string.about_me_email) });
+
+        context.startActivity(Intent.createChooser(emailIntent, context.getString(idEmail)));}
 
 }
