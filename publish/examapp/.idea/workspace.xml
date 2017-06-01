@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7eb6ff28-a7d6-47dc-9e7a-5d3e0e74aa5a" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="24286658_examapp@serwer1757813.home.pl" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="exams_and_terms_by_groups_ids.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exams_and_terms_by_groups_ids.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="24286658_examapp.exams" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/8cc5ab11/d71a461f-a796-449e-ae1d-0b84c6cf771a/24286658_examapp.exams">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DB_Functions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/include/DB_Functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="n#getExamsByGroup#0;n#DB_Functions#0;n#!!top" expanded="false" />
+                <element signature="n#getExamsByUserID#0;n#DB_Functions#0;n#!!top" expanded="false" />
+                <element signature="n#getExamTerms#0;n#DB_Functions#0;n#!!top" expanded="false" />
+                <element signature="n#getGroupByIdAndPassword#0;n#DB_Functions#0;n#!!top" expanded="false" />
+                <marker date="1496264207698" expanded="true" signature="326:396" ph="SELECT group... groups_members" />
+                <marker date="1496264207698" expanded="true" signature="326:552" ph="SELECT group... groups" />
+                <marker date="1496264207698" expanded="true" signature="326:553" ph="SELECT group... groups" />
+                <marker date="1496264207698" expanded="true" signature="1038:1142" ph="SELECT * FRO... exams" />
+                <marker date="1496264207698" expanded="true" signature="1627:1887" ph="SELECT * FRO... exams" />
+                <marker date="1496264207698" expanded="true" signature="1744:1867" ph="SELECT group... groups_members" />
+                <marker date="1496264207698" expanded="true" signature="2367:2476" ph="SELECT * FRO... terms" />
+                <marker date="1496264207698" expanded="true" signature="2960:3384" ph="SELECT * FRO... terms" />
+                <marker date="1496264207698" expanded="true" signature="3080:3364" ph="SELECT exams... exams" />
+                <marker date="1496264207698" expanded="true" signature="3215:3342" ph="SELECT group... groups_members" />
+                <marker date="1496264207698" expanded="true" signature="3898:4011" ph="SELECT * FRO... groups" />
+                <marker date="1496264207698" expanded="true" signature="4575:4642" ph="SELECT * FRO... exams" />
+                <marker date="1496264207698" expanded="true" signature="4575:4643" ph="SELECT * FRO... exams" />
+                <marker date="1496264207698" expanded="true" signature="4575:4682" ph="SELECT * FRO... exams" />
+                <marker date="1496264207698" expanded="true" signature="5017:5253" ph="SELECT * FRO... terms" />
+                <marker date="1496264207698" expanded="true" signature="5133:5233" ph="SELECT exams... exams" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="24286658_examapp.groups" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/8cc5ab11/d71a461f-a796-449e-ae1d-0b84c6cf771a/24286658_examapp.groups">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="24286658_examapp.terms" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/8cc5ab11/d71a461f-a796-449e-ae1d-0b84c6cf771a/24286658_examapp.terms">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+              <folding>
+                <element signature="e#65#97#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>name</find>
+      <find>user</find>
+      <find>entry_date</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/groups_functions.php" />
+        <option value="$PROJECT_DIR$/runnable/exams_by_id.php" />
+        <option value="$PROJECT_DIR$/exams_functions.php" />
+        <option value="$PROJECT_DIR$/exams_by_id.php" />
+        <option value="$PROJECT_DIR$/DB_connect.php" />
+        <option value="$PROJECT_DIR$/DB_Functions.php" />
+        <option value="$PROJECT_DIR$/DB_Login.php" />
+        <option value="$PROJECT_DIR$/include/register.php" />
+        <option value="$PROJECT_DIR$/register.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="dbtable:/8cc5ab11/709b565a-bf9f-4ea2-a1b0-3ac6345881d2/examappdb.exams" />
+        <option value="$PROJECT_DIR$/include/DB_Login.php" />
+        <option value="$PROJECT_DIR$/include/x.php" />
+        <option value="$PROJECT_DIR$/include/DB_SimpleLogin.php" />
+        <option value="$PROJECT_DIR$/simple_login.php" />
+        <option value="$PROJECT_DIR$/groups_by_user_id.php" />
+        <option value="dbtable:/8cc5ab11/709b565a-bf9f-4ea2-a1b0-3ac6345881d2/examappdb.terms" />
+        <option value="$PROJECT_DIR$/exams_by_user_id.php" />
+        <option value="$PROJECT_DIR$/terms_by_user_id.php" />
+        <option value="$PROJECT_DIR$/terms_by_exam_id.php" />
+        <option value="$PROJECT_DIR$/include/DB_Connect.php" />
+        <option value="$PROJECT_DIR$/group_by_group_id_and_password.php" />
+        <option value="$PROJECT_DIR$/include/config.php" />
+        <option value="$PROJECT_DIR$/exams_by_group_id.php" />
+        <option value="$PROJECT_DIR$/exams_and_terms_by_groups_ids.php" />
+        <option value="$PROJECT_DIR$/include/DB_Functions.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="6" />
+    <option name="width" value="1918" />
+    <option name="height" value="1034" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examapp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examapp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/php/php5.6.25/php_xdebug-2.5.4-5.6-vc11-nts-x86_64.dll" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\examapp" />
+      <recent name="C:\wamp64\www\examapp\include" />
+      <recent name="C:\wamp64\www\examapp\runnable" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHP Script.exams_and_terms_by_groups_ids.php">
+    <configuration default="false" name="exams_by_user_id.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/exams_by_user_id.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="terms_by_user_id.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/terms_by_user_id.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="exams_by_group_id.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/exams_by_group_id.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="group_by_group_id_and_password.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/group_by_group_id_and_password.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="exams_and_terms_by_groups_ids.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/exams_and_terms_by_groups_ids.php">
+      <method />
+    </configuration>
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.exams_by_user_id.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.terms_by_user_id.php" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.exams_by_group_id.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.group_by_group_id_and_password.php" />
+      <item index="4" class="java.lang.String" itemvalue="PHP Script.exams_and_terms_by_groups_ids.php" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.exams_and_terms_by_groups_ids.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.exams_by_group_id.php" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.group_by_group_id_and_password.php" />
+        <item index="3" class="java.lang.String" itemvalue="PHP Script.terms_by_user_id.php" />
+        <item index="4" class="java.lang.String" itemvalue="PHP Script.exams_by_user_id.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7eb6ff28-a7d6-47dc-9e7a-5d3e0e74aa5a" name="Default" comment="" />
+      <created>1495550033975</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1495550033975</updated>
+      <workItem from="1495550037404" duration="10959000" />
+      <workItem from="1495603020562" duration="2238000" />
+      <workItem from="1495619783449" duration="949000" />
+      <workItem from="1495631319638" duration="1846000" />
+      <workItem from="1495698848862" duration="13200000" />
+      <workItem from="1495734950471" duration="4218000" />
+      <workItem from="1495805141047" duration="2844000" />
+      <workItem from="1495875956614" duration="596000" />
+      <workItem from="1495886136080" duration="3985000" />
+      <workItem from="1495963899585" duration="601000" />
+      <workItem from="1495974613973" duration="1344000" />
+      <workItem from="1495987559943" duration="852000" />
+      <workItem from="1495993928727" duration="2892000" />
+      <workItem from="1496075565716" duration="11108000" />
+      <workItem from="1496215336124" duration="606000" />
+      <workItem from="1496244252255" duration="7067000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="65305000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="6" width="1918" height="1034" extended-state="1" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18191378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21353066" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23764458" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2391775" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2716702" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22566845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="15" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="dbDummy://dbtable:/8cc5ab11/709b565a-bf9f-4ea2-a1b0-3ac6345881d2/examappdb.terms">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/709b565a-bf9f-4ea2-a1b0-3ac6345881d2/examappdb.groups_members">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/709b565a-bf9f-4ea2-a1b0-3ac6345881d2/examappdb.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_SimpleLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <marker date="1495719149780" expanded="true" signature="321:383" ph="SELECT users... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groups_by_user_id.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_Functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="n#getExamsByGroup#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <element signature="n#getExamsByUserID#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <element signature="n#getExamTerms#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupByIdAndPassword#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <marker date="1496264207698" expanded="true" signature="326:396" ph="SELECT group... groups_members" />
+            <marker date="1496264207698" expanded="true" signature="326:552" ph="SELECT group... groups" />
+            <marker date="1496264207698" expanded="true" signature="326:553" ph="SELECT group... groups" />
+            <marker date="1496264207698" expanded="true" signature="1038:1142" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="1627:1887" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="1744:1867" ph="SELECT group... groups_members" />
+            <marker date="1496264207698" expanded="true" signature="2367:2476" ph="SELECT * FRO... terms" />
+            <marker date="1496264207698" expanded="true" signature="2960:3384" ph="SELECT * FRO... terms" />
+            <marker date="1496264207698" expanded="true" signature="3080:3364" ph="SELECT exams... exams" />
+            <marker date="1496264207698" expanded="true" signature="3215:3342" ph="SELECT group... groups_members" />
+            <marker date="1496264207698" expanded="true" signature="3898:4011" ph="SELECT * FRO... groups" />
+            <marker date="1496264207698" expanded="true" signature="4575:4642" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="4575:4643" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="4575:4682" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="5017:5253" ph="SELECT * FRO... terms" />
+            <marker date="1496264207698" expanded="true" signature="5133:5233" ph="SELECT exams... exams" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php" />
+    <entry file="file://$PROJECT_DIR$/include/DB_Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+          <folding>
+            <marker date="1495718832317" expanded="true" signature="513:573" ph="INSERT INTO users... " />
+            <marker date="1495718832317" expanded="true" signature="852:891" ph="SELECT id FR... users" />
+            <marker date="1495718832317" expanded="true" signature="1306:1325" ph="SELECT id, u... users" />
+            <marker date="1495718832317" expanded="true" signature="1306:1344" ph="SELECT * FRO... users" />
+            <marker date="1495718832317" expanded="true" signature="2011:2056" ph="SELECT user_... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php" />
+    <entry file="file://$PROJECT_DIR$/exams_by_group_id.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_Functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding>
+            <element signature="n#getExamsByGroup#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <element signature="n#getExamsByUserID#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <element signature="n#getExamTerms#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupByIdAndPassword#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <marker date="1496264207698" expanded="true" signature="326:396" ph="SELECT group... groups_members" />
+            <marker date="1496264207698" expanded="true" signature="326:552" ph="SELECT group... groups" />
+            <marker date="1496264207698" expanded="true" signature="326:553" ph="SELECT group... groups" />
+            <marker date="1496264207698" expanded="true" signature="1038:1142" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="1627:1887" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="1744:1867" ph="SELECT group... groups_members" />
+            <marker date="1496264207698" expanded="true" signature="2367:2476" ph="SELECT * FRO... terms" />
+            <marker date="1496264207698" expanded="true" signature="2960:3384" ph="SELECT * FRO... terms" />
+            <marker date="1496264207698" expanded="true" signature="3080:3364" ph="SELECT exams... exams" />
+            <marker date="1496264207698" expanded="true" signature="3215:3342" ph="SELECT group... groups_members" />
+            <marker date="1496264207698" expanded="true" signature="3898:4011" ph="SELECT * FRO... groups" />
+            <marker date="1496264207698" expanded="true" signature="4575:4642" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="4575:4643" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="4575:4682" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="5017:5253" ph="SELECT * FRO... terms" />
+            <marker date="1496264207698" expanded="true" signature="5133:5233" ph="SELECT exams... exams" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php" />
+    <entry file="file://$PROJECT_DIR$/include/DB_Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+          <folding>
+            <marker date="1495718832317" expanded="true" signature="513:573" ph="INSERT INTO users... " />
+            <marker date="1495718832317" expanded="true" signature="852:891" ph="SELECT id FR... users" />
+            <marker date="1495718832317" expanded="true" signature="1306:1325" ph="SELECT id, u... users" />
+            <marker date="1495718832317" expanded="true" signature="1306:1344" ph="SELECT * FRO... users" />
+            <marker date="1495718832317" expanded="true" signature="2011:2056" ph="SELECT user_... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3b9439d6-fff1-4723-99ac-b59fdbd67d05/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6a2768c-6766-4d4e-8e86-69347d4cb485/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a4ef2696-655d-4061-a696-dc211f4bf8ff/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/709b565a-bf9f-4ea2-a1b0-3ac6345881d2/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groups_functions.php" />
+    <entry file="file://$PROJECT_DIR$/exams_functions.php" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php" />
+    <entry file="file://$PROJECT_DIR$/login.php" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="1118" column="20" lean-forward="false" selection-start-line="1118" selection-start-column="20" selection-end-line="1118" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding>
+            <marker date="1495718832317" expanded="true" signature="513:573" ph="INSERT INTO users... " />
+            <marker date="1495718832317" expanded="true" signature="852:891" ph="SELECT id FR... users" />
+            <marker date="1495718832317" expanded="true" signature="1306:1325" ph="SELECT id, u... users" />
+            <marker date="1495718832317" expanded="true" signature="1306:1344" ph="SELECT * FRO... users" />
+            <marker date="1495718832317" expanded="true" signature="2011:2056" ph="SELECT user_... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_SimpleLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <marker date="1495719149780" expanded="true" signature="321:383" ph="SELECT users... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/709b565a-bf9f-4ea2-a1b0-3ac6345881d2/examappdb.exams">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/709b565a-bf9f-4ea2-a1b0-3ac6345881d2/examappdb.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_Connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/709b565a-bf9f-4ea2-a1b0-3ac6345881d2/examappdb.groups_members">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/709b565a-bf9f-4ea2-a1b0-3ac6345881d2/examappdb.groups">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/json/json.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="123" column="29" lean-forward="true" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d71a461f-a796-449e-ae1d-0b84c6cf771a/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/709b565a-bf9f-4ea2-a1b0-3ac6345881d2/examappdb.terms">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/d71a461f-a796-449e-ae1d-0b84c6cf771a/24286658_examapp.groups_members">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/d71a461f-a796-449e-ae1d-0b84c6cf771a/24286658_examapp.users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group_by_group_id_and_password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groups_by_user_id.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/terms_by_exam_id.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/terms_by_user_id.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exams_by_user_id.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exams_by_group_id.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exams_and_terms_by_groups_ids.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/d71a461f-a796-449e-ae1d-0b84c6cf771a/24286658_examapp.groups">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/d71a461f-a796-449e-ae1d-0b84c6cf771a/24286658_examapp.exams">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cc5ab11/d71a461f-a796-449e-ae1d-0b84c6cf771a/24286658_examapp.terms">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <folding>
+            <element signature="e#65#97#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_Functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="n#getExamsByGroup#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <element signature="n#getExamsByUserID#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <element signature="n#getExamTerms#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupByIdAndPassword#0;n#DB_Functions#0;n#!!top" expanded="false" />
+            <marker date="1496264207698" expanded="true" signature="326:396" ph="SELECT group... groups_members" />
+            <marker date="1496264207698" expanded="true" signature="326:552" ph="SELECT group... groups" />
+            <marker date="1496264207698" expanded="true" signature="326:553" ph="SELECT group... groups" />
+            <marker date="1496264207698" expanded="true" signature="1038:1142" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="1627:1887" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="1744:1867" ph="SELECT group... groups_members" />
+            <marker date="1496264207698" expanded="true" signature="2367:2476" ph="SELECT * FRO... terms" />
+            <marker date="1496264207698" expanded="true" signature="2960:3384" ph="SELECT * FRO... terms" />
+            <marker date="1496264207698" expanded="true" signature="3080:3364" ph="SELECT exams... exams" />
+            <marker date="1496264207698" expanded="true" signature="3215:3342" ph="SELECT group... groups_members" />
+            <marker date="1496264207698" expanded="true" signature="3898:4011" ph="SELECT * FRO... groups" />
+            <marker date="1496264207698" expanded="true" signature="4575:4642" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="4575:4643" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="4575:4682" ph="SELECT * FRO... exams" />
+            <marker date="1496264207698" expanded="true" signature="5017:5253" ph="SELECT * FRO... terms" />
+            <marker date="1496264207698" expanded="true" signature="5133:5233" ph="SELECT exams... exams" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
