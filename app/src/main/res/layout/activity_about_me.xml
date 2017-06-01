@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.przemek.egzaminel.Activities.AboutMeActivity">
+    tools:context="materna.przemek.egzaminel.Activities.AboutMeActivity">
 
     <ImageView
         android:id="@+id/imageView"

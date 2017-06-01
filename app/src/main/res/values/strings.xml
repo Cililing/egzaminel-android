@@ -17,7 +17,7 @@
     <string name="main_menu_list">Lista</string>
     <string name="main_menu_data_res">Źródła danych</string>
     <string name="main_menu_settigins">Ustawienia</string>
-    <string name="groups_input_def_text"></string>
+    <string name="groups_input_def_text" translatable="false"></string>
 
 
     <string name="database_error">Błąd bazy danych</string>

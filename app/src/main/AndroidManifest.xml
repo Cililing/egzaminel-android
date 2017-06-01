@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.przemek.egzaminel">
+
+    package="materna.przemek.egzaminel">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
 
     <application
-        android:name=".Network.AppNetworkController"
+        android:name="materna.przemek.egzaminel.Network.AppNetworkController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,21 +16,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activities.MainActivity"
-            android:noHistory="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        android:name="materna.przemek.egzaminel.Activities.MainActivity"
+        android:noHistory="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
-        <activity android:name=".Activities.Exam.ExamActivity" />
-        <activity android:name=".Activities.DataVies.GroupsActivity" />
-        <activity android:name=".Activities.DataVies.ExamsActivity" />
-        <activity android:name=".Activities.MainMenu" />
-        <activity android:name=".Activities.Calendar.CalendarActivity" />
-        <activity android:name=".Activities.AboutMeActivity" />
-        <activity android:name=".Activities.SettiginsActivity"></activity>
+
+        <activity android:name="materna.przemek.egzaminel.Activities.Exam.ExamActivity" />
+        <activity android:name="materna.przemek.egzaminel.Activities.DataVies.GroupsActivity" />
+        <activity android:name="materna.przemek.egzaminel.Activities.DataVies.ExamsActivity" />
+        <activity android:name="materna.przemek.egzaminel.Activities.MainMenu" />
+        <activity android:name="materna.przemek.egzaminel.Activities.Calendar.CalendarActivity" />
+        <activity android:name="materna.przemek.egzaminel.Activities.AboutMeActivity" />
+        <activity android:name="materna.przemek.egzaminel.Activities.SettiginsActivity"></activity>
+
     </application>
 
 </manifest>

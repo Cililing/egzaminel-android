@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activities.Exam.ExamActivity">
+    tools:context="materna.przemek.egzaminel.Activities.Exam.ExamActivity">
 
 
     <TextView
@@ -85,7 +85,6 @@
             android:layout_alignBaseline="@+id/exam_teacher_label"
             android:layout_alignBottom="@+id/exam_teacher_label"
             android:layout_alignParentEnd="true"
-            android:layout_alignStart="@+id/exam_date_spinner"
             android:layout_column="1"
             android:layout_margin="@dimen/no_margin"
             android:layout_marginEnd="8dp"
@@ -125,7 +124,6 @@
             android:id="@+id/exam_topic"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/exam_date_spinner"
             android:layout_below="@+id/exam_teacher_label"
             android:layout_column="1"
             android:layout_marginBottom="8dp"

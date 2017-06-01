@@ -1,30 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">egzamineł</string>
-    <string name="exam_date">Data</string>
-    <string name="exam_reminder">Przypomnij</string>
+    <string name="app_name">Egzamineł</string>
     <string name="exam_teacher">Prowadzący</string>
     <string name="exam_type">Typ</string>
-    <string name="exams_select">Wybierz egzamin</string>
-    <string name="groups_select">Wybierz grupę</string>
+    <string name="exam_date">Data</string>
+    <string name="exam_reminder">Przypomnij</string>
     <string name="main_login">Zaloguj się</string>
     <string name="main_login_button">Zaloguj!</string>
-    <string name="main_login_password">admin</string>
     <string name="main_login_username">admin</string>
+    <string name="main_login_password">admin</string>
+    <string name="groups_select">Wybierz grupę</string>
+    <string name="exams_select">Wybierz egzamin</string>
     <string name="main_menu_calendar">Kalendarz</string>
     <string name="main_menu_list">Lista</string>
     <string name="main_menu_data_res">Źródła danych</string>
     <string name="main_menu_settigins">Ustawienia</string>
+    <string name="database_error">Błąd bazy danych</string>
+    <string name="network_error">Błąd sieci</string>
+    <string name="synchronization_finished">Synchronizacja zakończona.</string>
     <string name="wrong_data_input">Nieprawidłowe dane.</string>
     <string name="groups_input_label">Podaj dane grupy</string>
     <string name="groups_yes_no_title">Potwierdź...</string>
     <string name="groups_yes_no_message">Czy chcesz usunąć grupę? Danego działania nie da się cofnąć.</string>
     <string name="groups_yes_no_yes">Tak</string>
+    <string name="groups_yes_no_no">Nie</string>
     <string name="exam_chose_your_term">Wybierz swój termin</string>
     <string name="groups_is_waiting">Przetwarzam poprzednie żądanie...</string>
     <string name="groups_group_already_in_dataset">Już dodałeś tą grupę!</string>
+    <string name="about_me_conent">Przemek Materna\n
+        Politechnika Wrocławska\n
+        Aplikacja jest zaliczeniem na SWiM.\n
+        Indeks: 228114\n
+        Enjoy and have fun!</string>
+    <string name="about_me_email">przemek.materna@gmail.com</string>
+    <string name="about_me_app_email">examappcreator@gmail.com</string>
     <string name="send_email">Wyślij maila!</string>
-    <string name="settigins_info">Aplikacja rozwojowa. Personalizacja w planie ;)</string>
+    <string name="settigins_info">Aplikacja rozwojowa. Personalizacja w planie ;)\n
+        Propozycje/pytania/opinie prosiłbym o kierowanie na poniższy adres email.\n
+        Jeżeli chcesz zobaczyć informacje o mnie, wstrząśnij.
+    </string>
     <string name="about_me_shaking">Dobra, wystarczy</string>
     <string name="icons_web">Ikony dzięki FlatIcon (y)</string>
+
 </resources>
